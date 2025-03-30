@@ -1,0 +1,10 @@
+@use "../base/_mixin.scss" as *;
+
+.footer{
+  margin-top: px-clamp(80,170,375,2000);
+}
+
+.footer-copy{
+    display: block;
+    text-align: center;
+}

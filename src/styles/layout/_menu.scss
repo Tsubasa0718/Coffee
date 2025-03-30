@@ -1,0 +1,72 @@
+@use"../base/_mixin.scss" as *;
+
+.menu {
+  margin-top: px-to-rem(10px);
+}
+
+.menu-list-body{
+ margin-top: px-clamp(30,178,375,2000);
+}
+
+.menu-list-wrapper{
+ @include responsive("tablet"){
+    display: flex;
+    justify-content: center;
+ }
+}
+
+.menu-list-box{
+  margin-bottom: px-to-rem(35px);
+  @include responsive("tablet"){
+    margin-bottom: 0;
+    padding: 0 px-to-rem(45px);
+  }
+}
+
+.menu-list-box--coffee,
+.menu-side-list-wrapper{
+ @include responsive("tablet"){
+    width: 50%;
+ }
+}
+
+.menu-list-box--other{
+  @include responsive("tablet"){
+   margin-top: px-to-rem(80px);
+  }
+}
+
+.menu-list{
+    margin-top: px-clamp(25,70,375,2000);
+ }
+
+ .menu-data-wrap{
+    margin-bottom: px-to-rem(25px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ .menu-list-name,
+ .menu-list-price{
+  font-weight: 500;
+ }
+
+ .menu-list-name{
+    width: 85%;
+    line-height: 1.5;
+    border-bottom: px-to-rem(1px) dashed #000;
+    @include responsive("phone"){
+      width: 90%;
+    }
+ }
+ .menu-list-price{
+    padding-top: px-to-rem(20px);
+    font-size: px-to-rem(14.4px);
+ }
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+@use "../base/_mixin.scss" as *;
+
+// titleのアンダーライン
+.theme-under-line{
+ display: inline-block;
+ border-bottom: px-to-rem(6px) solid var(--line-color);
+}
+
+// btn枠線
+
+.btn::before,
+.btn::after{
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: var(--line-color);
+    transition: all 0.3s ease;
+}
+
+.btn--line::before,
+.btn--line::after{
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: var(--line-color);
+  transition: all 0.3s ease;
+}
+
+.btn::before,
+.btn--line::before{
+    width: px-to-rem(2px);
+    height: 50%;
+}
+.btn::after,
+.btn--line::after{
+    width: 20%;
+    height: px-to-rem(2px);
+}
+
+// hover
+
+.btn:hover::before,
+.btn--line:hover::before{
+    height: 100%;
+}
+.btn:hover::after,
+.btn--line:hover::after{
+    width: 100%;
+}
+
+// mapの色
+.theme-map-scale{
+    filter: grayscale(1);
+}

@@ -1,0 +1,33 @@
+<section class="about">
+    <!-- パララックス -->
+    <div class="fixed-bg">
+        <h2 class="section-title fixed-bg-title">ABOUT</h2>
+        <div class="fixed-bg-attachment">
+          <figure class="fixed-bg-image">
+            <img src="../img/about.jpg" alt="カフェのテーブルに置かれたラテ。手がカップに向かって伸びる。テーブルにはグラスとスマートフォンもある。背景には壁。">
+          </figure>
+        </div>
+    </div>
+  <div class="container">
+   <div class="about-body">
+      <div class="section-head-wrap">
+        <h3 class="section-head theme-under-line">COFFEE</h3>
+      </div>
+       <div class="about-article-body">
+           <div class="about-article-wrapper">
+               <% articleData.forEach((item)=>{ %>
+               <article class="about-article">
+                   <%= item.article %>
+               </article>
+               <% }) %>
+           </div>
+       </div>
+   </div>
+   <!-- btn -->
+    <div class="about-btn">
+       <a href="#" class="btn">
+           <span class="btn--line">Read More</span>
+       </a>
+    </div>
+  </div>
+</section>

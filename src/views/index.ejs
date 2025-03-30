@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="洗練されたカフェ「COFFEE」の公式ウェブサイトのデザインカンプです。ミニマルかつスタイリッシュなデザインが特徴で、大きな背景画像を活かした視覚的に魅力的なレイアウトになっています。">
+    <meta name="robots" content="noindex , nofollow">
+    <!-- OGP -->
+    <meta property="og:title" content="COFFEE">
+    <meta property="og:description" content="洗練されたカフェ「COFFEE」の公式ウェブサイトのデザインカンプです。ミニマルかつスタイリッシュなデザインが特徴で、大きな背景画像を活かした視覚的に魅力的なレイアウトになっています。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://coffee-atelier-queue.netlify.app/">
+    <meta property="og:image" content="https://coffee-atelier-queue.netlify.app/img/OGP.png">
+    <title>COFFEE</title>
+    <link rel="stylesheet" href="/css/style.css">
+     <!-- favicon -->
+     <link rel="icon" type="image/x-icon" href="/favicon.ico">
+     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+   </head>
+<body>
+   <%- include('./layout/_header.ejs') %>
+   <main class="main">
+   <%- include('./section/_menu.ejs') %>
+   <%- include('./section/_about.ejs') %>
+   <%- include('./section/_location.ejs') %>
+   </main>
+   <%- include('./layout/_footer.ejs') %>
+</body>
+</html>

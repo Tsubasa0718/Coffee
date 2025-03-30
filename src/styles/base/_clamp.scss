@@ -1,0 +1,28 @@
+@use "sass:math";
+
+@function px-clamp($min, $max, $minViewport, $maxViewport) {
+  // 最小値が最大値より大きい場合、値を入れ替える
+  @if $min > $max {
+    $temp: $min;
+    $min: $max;
+    $max: $temp;
+  }
+
+  $vwScale: math.div(
+    $max - $min,
+    $maxViewport - $minViewport
+  ); // vw単位でのスケールを計算
+
+  $baseOffset: $min - $minViewport * $vwScale; // 基準となる最小値からのオフセットを計算
+
+  $minRem: math.div($min, 16); // 最小値をremに変換
+  $maxRem: math.div($max, 16); // 最大値をremに変換
+  $baseOffsetRem: math.div($baseOffset, 16); // オフセットをremに変換
+  $vwScaleRem: $vwScale * 100; // vwスケールを調整
+
+  @return clamp(
+    #{$minRem}rem,
+    #{$baseOffsetRem}rem + #{$vwScaleRem}vw,
+    #{$maxRem}rem
+  );
+}

@@ -1,0 +1,42 @@
+@use "../base/_mixin.scss" as *;
+
+.fixed-bg{
+  position: relative;
+  height: px-clamp(94,300,375,2000);
+}
+
+.fixed-bg-attachment{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.fixed-bg-title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%,-50%);
+}
+
+.fixed-bg-image{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    clip-path: inset(0 0 0 0);
+    height: 100%;
+}
+
+.fixed-bg-image > img{
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+}

@@ -1,0 +1,36 @@
+@use "../base/_mixin.scss" as *;
+
+.location{
+  margin-top: px-clamp(115,170,375,2000);
+}
+
+.location-map-body{
+    margin-top: px-clamp(30,90,375,2000);
+}
+
+.location-map{
+    margin-top: px-clamp(25,70,375,2000);
+}
+
+.location-map > iframe{
+  width: 100%;
+  height: px-to-rem(400px);
+  aspect-ratio: 16 / 9;
+}
+
+.location-info{
+    margin-top: px-to-rem(20px);
+}
+
+.location-address,
+.location-hours{
+ margin-bottom: px-to-rem(10px);
+}
+
+.location-address > p,
+.location-hours > p > time,
+.location-tel > p{
+   font-size: px-clamp(14,16,375,2000);
+   line-height: 1.5;
+}
+

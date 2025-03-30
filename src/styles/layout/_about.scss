@@ -1,0 +1,34 @@
+@use "../base/_mixin.scss" as *;
+
+.about{
+    margin-top: px-clamp(115,170,375,2000);
+  }
+
+ .about-body{
+   margin-top: px-clamp(30,90,375,2000);
+ }
+
+ .about-article-body{
+    margin-top: px-clamp(69,90,375,2000);
+ }
+
+ .about-article-wrapper{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: px-clamp(20,40,375,2000);
+  @include responsive("tablet"){
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: px-to-rem(40px);
+  }
+ }
+
+ .about-article{
+    font-size: px-clamp(14,16,375,2000);
+    line-height: 1.7;
+ }
+
+ .about-btn{
+  margin-top: px-clamp(50,80,375,2000);
+  text-align: center;
+ }

@@ -1,0 +1,22 @@
+@use"../base/_rem.scss" as *;
+
+.nav{
+ padding: px-to-rem(20px) px-to-rem(40px) 0 0;
+}
+
+.nav-list {
+ display: flex;
+ align-items: center;
+ justify-content: end;
+}
+
+.nav-item:not(:first-of-type){
+    margin-left: px-to-rem(30px);
+}
+
+.nav-link{
+  font-size: px-to-rem(14.4px);
+  font-weight: bold;
+  color: var(--base-color);
+  line-height: 1.7;
+}

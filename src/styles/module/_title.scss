@@ -1,0 +1,19 @@
+@use"../base/_mixin.scss" as *;
+
+.section-title{
+ font-size: px-clamp(32,72,375,2000);
+  font-weight: bold;
+  color: var(--base-color);
+  line-height: px-clamp(54.4,122.4,375,2000);
+  filter: drop-shadow(1px 1px 10px #c0c0c0);
+}
+
+.section-head-wrap{
+ text-align: center;
+}
+
+.section-head{
+  font-size: px-clamp(20,40,375,2000);
+  font-weight: bold;
+  line-height: 1.7;
+}

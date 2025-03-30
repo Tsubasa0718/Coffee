@@ -1,0 +1,7 @@
+@use"../base/_rem.scss" as *;
+
+.container{
+    max-width: px-to-rem(968px);
+    margin: 0 auto;
+    padding: 0 px-to-rem(15px);
+}
